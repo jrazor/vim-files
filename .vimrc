@@ -21,6 +21,11 @@ set backspace=2           "notepad style backspacing
 set title                 "set the terminal title to the filename
 set scrolloff=9           "start scrolling when hits this many lines from edge
 set showtabline=2         "always show tab bar
+                                
+"colors                         
+filetype plugin indent on       
+syntax on                       
+                                
 
 
 "calls sudo and asks for password if necessary
@@ -117,5 +122,16 @@ endif
 augroup remember_folds
     autocmd!
     autocmd BufWinLeave *.* mkview
+    
+"NERD TREE settings
+autocmd vimenter * NERDTree
+
+ autocmd StdinReadPre * let s:std_in=1
+ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif      
+
+ let NERDTreeShowHidden=1
+
     autocmd BufWinEnter *.* loadview
 augroup END
+
+
