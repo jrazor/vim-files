@@ -134,4 +134,5 @@ autocmd vimenter * NERDTree
     autocmd BufWinEnter *.* loadview
 augroup END
 
-
+"updating vim update time to improve vim-gitgutter refresh
+set updatetime=100                                           
