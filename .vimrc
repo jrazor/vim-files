@@ -26,7 +26,7 @@ set showtabline=2         "always show tab bar
 filetype plugin indent on       
 syntax on                       
                                 
-
+"colorscheme candystripe
 
 "calls sudo and asks for password if necessary
 cmap w!! %!sudo tee > /dev/null %
